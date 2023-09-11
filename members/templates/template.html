@@ -1,0 +1,17 @@
+{% extends "master.html" %} {% block content %} 
+{% with firstname="Tobias" %}
+<h1>Hello {{ firstname }}, how are you?</h1>
+{% endwith %}
+<ul>
+  {% for x in mymembers %}
+  <li>{{ x.firstname }}</li>
+  {% endfor %}
+</ul>
+<ul>
+  {% for x in fruits %}
+    <li>{{ x }}</li>
+  {% endfor %}
+</ul>
+
+{% endblock %}
+
