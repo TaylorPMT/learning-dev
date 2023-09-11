@@ -1,7 +1,12 @@
+{% load static %}
 <!DOCTYPE html>
 <html>
   <head>
     <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <link rel="stylesheet" href="{% static 'myglobal.css' %}">
+    <link rel="stylesheet" href="{% static 'mystyles.css' %}">  
+
   </head>
   <body>
     {% block userinfo %}
@@ -10,5 +15,8 @@
     {% block content %} 
     
     {% endblock %}
+
+    {% include 'footer.html' %} 
+
   </body>
 </html>

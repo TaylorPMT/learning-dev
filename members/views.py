@@ -34,6 +34,16 @@ def testing(request):
     context = {
         'firstname': 'Linus',
         'mymembers': members,
-        'fruits': ['Apple', 'Banana', 'Cherry', 'Orange']
+        'members':members,
+        'fruits': ['Apple', 'Banana', 'Cherry', 'Orange'],
+        'mycar': {
+            'brand': 'Ford',
+            'model': 'Mustang',
+            'year': '1964',
+        },
+        'greeting': 1,
+        'day': 'Friday',
+         'x': ['Apple', 'Banana', 'Cherry'], 
+         'y': ['Apple', 'Banana', 'Cherry'], 
     }
     return HttpResponse(template.render(context, request))
