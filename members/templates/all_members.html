@@ -13,4 +13,14 @@ members
   </li>
   {% endfor %}
 </ul>
+</hr>
+Slug redirect
+<ul>
+  {% for x in mymembers %}
+  <li>
+    <a href="{%url 'slugsdetail' x.slug %}">{{ x.firstname }} {{ x.lastname }}</a>
+  </li>
+  {% endfor %}
+</ul>
+
 {% endblock %}
