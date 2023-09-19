@@ -22,9 +22,7 @@ class HomeTests(TestCase):
 
     def test_home_view_contains_link_to_topics_page(self):
         board_topics_url = reverse('board_topics', kwargs={'pk': self.board.pk})
-        print('Testing board_topics_url')
-        print('href="{0}"'.format(board_topics_url))
-        print(self.response)
+
         self.assertContains(self.response, 'href="{0}"'.format(board_topics_url))
 
 class BoardTopicsTests(TestCase):

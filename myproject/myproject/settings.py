@@ -39,6 +39,7 @@ INSTALLED_APPS = [
      #LIBRARY_APP
     'widget_tweaks',
      #INSTANCE_APP 
+    'myproject',
     'accounts',
     'boards',
 ]
