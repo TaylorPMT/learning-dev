@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 
 from pathlib import Path
 
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -24,6 +25,11 @@ SECRET_KEY = 'django-insecure-ldg@m+g_i)o2u+=!-)%!+14%!&1uwmc$%30vyc1cfde%o(35l(
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
+# SECURITY CONFIGURATION AUTHENTICATION
+LOGIN_URL = '/auth/login'
+LOGOUT_REDIRECT_URL = 'home'
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+#END CONFIGURATION AUTHENTICATION
 
 ALLOWED_HOSTS = []
 
