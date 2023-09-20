@@ -5,6 +5,7 @@ from ..views import home, board_topics, new_topic
 from django.contrib.auth.models import User
 from ..models import Board, Topic, Post
 from ..forms import NewTopicForm
+from ..views import BoardListView
 
 class HomeTests(TestCase):
     def setUp(self):
@@ -17,7 +18,7 @@ class HomeTests(TestCase):
 
     def test_home_url_resolves_home_view(self):
         view = resolve('/')
-        self.assertEquals(view.func, home)
+        self.assertEquals(view.func, BoardListView)
 
     def test_home_view_contains_link_to_topics_page(self):
         board_topics_url = reverse('board_topics', kwargs={'pk': self.board.pk})
