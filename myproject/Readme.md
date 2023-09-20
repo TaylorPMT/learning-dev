@@ -5,3 +5,14 @@
 ```python
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 ```
+
+**Protecting Views Middleware**
+```python
+from django.contrib.auth.decorators import login_required
+#USES Annotation:  @login_required
+```
+
+**Accessing the Authenticated User**
+```python
+
+```

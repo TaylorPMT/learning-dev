@@ -48,6 +48,8 @@ INSTALLED_APPS = [
     'myproject',
     'accounts',
     'boards',
+    #Testing
+    'boards.tests'
 ]
 
 MIDDLEWARE = [
