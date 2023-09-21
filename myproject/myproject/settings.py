@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
      #LIBRARY_APP
     'widget_tweaks',
+    'django.contrib.humanize',  # <- here
      #INSTANCE_APP 
     'myproject',
     'accounts',

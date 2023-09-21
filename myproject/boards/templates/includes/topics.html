@@ -1,9 +1,11 @@
+{% load humanize %}
 {% for topic in topics %}
-  <tr>
-    <td><a href="{% url 'topic_posts' board.pk topic.pk %}">{{ topic.subject }}</a></td>
-    <td>{{ topic.starter.username }}</td>
-    <td>{{ topic.replies }}</td>
-    <td>{{ topic.views }}</td>
-    <td>{{ topic.last_updated }}</td>
-  </tr>
+<tr>
+  <td><a href="{% url 'topic_posts' board.pk topic.pk %}">{{ topic.subject }}</a></td>
+  <td>{{ topic.starter.username }}</td>
+  <td>{{ topic.replies }}</td>
+  <td>{{ topic.views }}</td>
+  <td>{{ topic.last_updated|naturaltime }}</td>
+</tr>
 {% endfor %}
+{% include 'includes/pagination.html' %}

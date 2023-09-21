@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="{% static 'bs4/css/bootstrap.min.css' %}" />
   <link rel="stylesheet" href="{% static 'css/app.css' %}" />
   {% block stylesheet %}{% endblock %}
+  
   <!-- HERE -->
 </head>
 
@@ -28,7 +29,7 @@
                 {{ user.username }}
               </a>
               <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userMenu">
-                <a class="dropdown-item" href="#">My account</a>
+                <a class="dropdown-item" href="{% url 'my_account' %}">My account</a>
                 <a class="dropdown-item" href="{% url 'password_change' %}">Change password</a>
                 <div class="dropdown-divider"></div>
                 <a class="dropdown-item" href="{% url 'routeLogout' %}">Log out</a>
@@ -58,6 +59,7 @@
   <script src="{% static 'jquery/jquery-3.2.1.js' %}"></script>
   <script src="{% static 'bs4/js/bootstrap.bundle.js' %}"></script>
   <script src="{% static 'bs4/js/bootstrap.min.js' %}"></script>
+  {% block javascript %}{% endblock %} 
 </body>
 
 </html>

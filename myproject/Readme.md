@@ -30,3 +30,17 @@ from django.contrib.auth.decorators import login_required
 @method_decorator(login_required, name='dispatch')
 #It CBV it's common to decorate the dispatch method
 ```
+
+
+**Adding Markdown**
+```bash
+pip install markdown
+```
+
+1. We can add a new method to the Post model:
+models.py
+
+```python
+from markdown import markdown
+
+```
